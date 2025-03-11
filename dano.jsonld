@@ -1,0 +1,522 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "identifier" : "https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/phillip_schoenfelder.html.en",
+    "name" : "Ruhr-Universität Bochum"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "schema:Person",
+    "email" : "mailto:phillip.schoenfelder@rub.de",
+    "identifier" : "https://orcid.org/0000-0002-8685-436X",
+    "memberOf" : "_:b0",
+    "name" : "Phillip Schönfelder"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "foaf:Organization",
+    "homepage" : "http://www.inf.bi.rub.de",
+    "foaf:name" : "Chair of Computing in Engineering"
+  }, {
+    "@id" : "http://purl.org/dc/elements/1.1/coverage",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant."
+    },
+    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Coverage"
+    }
+  }, {
+    "@id" : "http://purl.org/dc/elements/1.1/format",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The file format, physical medium, or dimensions of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Format"
+    }
+  }, {
+    "@id" : "http://purl.org/dc/elements/1.1/identifier",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An unambiguous reference to the resource within a given context."
+    },
+    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Identifier"
+    }
+  }, {
+    "@id" : "http://purl.org/dc/elements/1.1/language",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A language of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Language"
+    },
+    "seeAlso" : "http://www.ietf.org/rfc/rfc4646.txt"
+  }, {
+    "@id" : "http://purl.org/dc/elements/1.1/publisher",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An entity responsible for making the resource available."
+    },
+    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Publisher"
+    }
+  }, {
+    "@id" : "http://purl.org/dc/elements/1.1/relation",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Relation"
+    }
+  }, {
+    "@id" : "http://purl.org/dc/elements/1.1/rights",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Information about rights held in and over the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Rights"
+    }
+  }, {
+    "@id" : "http://purl.org/dc/elements/1.1/source",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource from which the described resource is derived."
+    },
+    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Source"
+    }
+  }, {
+    "@id" : "http://purl.org/dc/elements/1.1/subject",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The topic of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Subject"
+    }
+  }, {
+    "@id" : "http://purl.org/dc/elements/1.1/title",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A name given to the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Title"
+    }
+  }, {
+    "@id" : "http://purl.org/dc/elements/1.1/type",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The nature or genre of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Type"
+    }
+  }, {
+    "@id" : "http://www.opengis.net/ont/geosparql",
+    "source" : [ "OGC GeoSPARQL – A Geographic Query Language for RDF Data OGC 11-052r5", {
+      "@id" : "http://www.opengis.net/doc/IS/geosparql/1.0"
+    } ],
+    "title" : "GeoSPARQL Ontology",
+    "seeAlso" : [ "http://www.opengis.net/doc/IS/geosparql/1.0", "http://www.opengis.net/def/rule/ogc-geosparql/1.0", "http://www.opengis.net/def/function/ogc-geosparql/1.0" ],
+    "versionIRI" : "http://www.opengis.net/ont/geosparql/1.0",
+    "versionInfo" : "OGC GeoSPARQL 1.0"
+  }, {
+    "@id" : "geo:defaultGeometry",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "\n      The default geometry to be used in spatial calculations.\n      It is Usually the most detailed geometry.\n    "
+    },
+    "isDefinedBy" : [ "http://www.opengis.net/spec/geosparql/1.0", "http://www.opengis.net/ont/geosparql" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "defaultGeometry"
+    },
+    "subPropertyOf" : "geo:hasGeometry"
+  }, {
+    "@id" : "geo:hasGeometry",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "\n      A spatial representation for a given feature.\n    "
+    },
+    "isDefinedBy" : [ "http://www.opengis.net/spec/geosparql/1.0", "http://www.opengis.net/ont/geosparql" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "hasGeometry"
+    }
+  }, {
+    "@id" : "xsd:date",
+    "@type" : "rdfs:Datatype"
+  }, {
+    "@id" : "schema:codeRepository",
+    "@type" : "owl:Thing"
+  }, {
+    "@id" : "schema:domainIncludes",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "schema:rangeIncludes",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "https://w3id.org/dano",
+    "@type" : "owl:Ontology",
+    "creator" : "_:b1",
+    "description" : {
+      "@language" : "en",
+      "@value" : "This ontology covers concepts of technical drawings from the perspective of computer vision-based drawing analysis to be used in collaborative settings or for post-processing.\n  schema:image <dano.png> ;\nThe preferred namespace prefix is `dano` for the namespace IRI [https://w3id.org/dano](https://w3id.org/dano). \n"
+    },
+    "issued" : "2025-03-11",
+    "license" : "https://creativecommons.org/licenses/by/4.0/",
+    "modified" : "2025-03-11",
+    "publisher" : "_:b2",
+    "rights" : "Copyright 2025 by Phillip Schönfelder",
+    "dc:source" : {
+      "@id" : "https://github.com/RUB-Informatik-im-Bauwesen/dano"
+    },
+    "dc:title" : {
+      "@language" : "en",
+      "@value" : "Drawing Analyis Ontology (DAnO)"
+    },
+    "preferredNamespacePrefix" : "dano",
+    "preferredNamespaceUri" : "https://w3id.org/dano",
+    "versionIRI" : "https://w3id.org/dano",
+    "versionInfo" : "v0.1",
+    "historyNote" : "\n  \n  v0.1: initial ontology\n  \n  "
+  }, {
+    "@id" : "dano:Composite",
+    "@type" : "owl:Class",
+    "comment" : "A composite element that aggregates multiple description elements.",
+    "label" : "Composite",
+    "subClassOf" : "dano:DescriptionElement"
+  }, {
+    "@id" : "dano:DescriptionElement",
+    "@type" : "owl:Class",
+    "comment" : "An abstract element in a drawing describing properties of display elements. For instance, a dimension line describing a wall or a text element specifying a schematic pump symbol.",
+    "label" : "Description Element",
+    "subClassOf" : "dano:DrawingElement"
+  }, {
+    "@id" : "dano:DimensionLine",
+    "@type" : "owl:Class",
+    "comment" : "A line indicating dimensions in a drawing, typically used to represent measurements.",
+    "label" : "Dimension Line",
+    "subClassOf" : "dano:Line"
+  }, {
+    "@id" : "dano:DimensionLineChain",
+    "@type" : "owl:Class",
+    "comment" : "A sequence of dimension lines connected together to represent cumulative measurements.",
+    "label" : "Dimension Line Chain",
+    "subClassOf" : "dano:Composite"
+  }, {
+    "@id" : "dano:DimensionLineMarker",
+    "@type" : "owl:Class",
+    "comment" : "A marker used to indicate endpoints or reference points on a dimension line.",
+    "label" : "Dimension Line Marker",
+    "subClassOf" : "dano:Symbol"
+  }, {
+    "@id" : "dano:DisplayElement",
+    "@type" : "owl:Class",
+    "comment" : "An element representing a real-world component.",
+    "label" : "Display Element",
+    "subClassOf" : "dano:DrawingElement"
+  }, {
+    "@id" : "dano:DrawingElement",
+    "@type" : "owl:Class",
+    "comment" : "A visual element in a drawing. Metadata for these elements are stored as DrawingElementMeta instances.",
+    "label" : "Drawing Element",
+    "subClassOf" : "owl:Thing"
+  }, {
+    "@id" : "dano:DrawingElementMeta",
+    "@type" : "owl:Class",
+    "comment" : "Metadata for drawing elements, including inference confidence and methods used.",
+    "label" : "Drawing Element Meta",
+    "subClassOf" : "owl:Thing"
+  }, {
+    "@id" : "dano:Line",
+    "@type" : "owl:Class",
+    "comment" : "A linear description element in a drawing.",
+    "label" : "Line",
+    "subClassOf" : "dano:DescriptionElement"
+  }, {
+    "@id" : "dano:Symbol",
+    "@type" : "owl:Class",
+    "comment" : "A symbolic description element representing various annotations or markers.",
+    "label" : "Symbol",
+    "subClassOf" : "dano:DescriptionElement"
+  }, {
+    "@id" : "dano:TextElement",
+    "@type" : "owl:Class",
+    "comment" : "A text-based description element in a drawing.",
+    "label" : "Text Element",
+    "subClassOf" : "dano:DescriptionElement"
+  }, {
+    "@id" : "dano:TextField",
+    "@type" : "owl:Class",
+    "comment" : "A composite element containing multiple text elements, typically for multiline text.",
+    "label" : "Text Field",
+    "subClassOf" : "dano:Composite"
+  }, {
+    "@id" : "dano:contains",
+    "@type" : [ "owl:TransitiveProperty", "owl:ObjectProperty" ],
+    "comment" : "Indicates that the subject drawing element contains the object drawing element. For instance, lines can contain two endpoints.",
+    "domain" : "dano:DrawingElement",
+    "label" : "contains",
+    "range" : "dano:DrawingElement",
+    "inverseOf" : "dano:isContainedIn"
+  }, {
+    "@id" : "dano:depicts",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Indicates that the subject display element graphically represents a real-world object, such as a building element, zone, or machine part.",
+    "domain" : "dano:DisplayElement",
+    "label" : "depicts"
+  }, {
+    "@id" : "dano:describes",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Establishes the relationship between a description element and a display element, where the description element describes the display element.",
+    "domain" : "dano:DescriptionElement",
+    "label" : "describes",
+    "range" : "dano:DisplayElement",
+    "inverseOf" : "dano:isDescribedBy"
+  }, {
+    "@id" : "dano:endsWith",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Indicates that a dimension line ends with a dimension line marker.",
+    "domain" : "dano:DimensionLine",
+    "label" : "ends with",
+    "range" : "dano:DimensionLineMarker",
+    "subPropertyOf" : "dano:contains"
+  }, {
+    "@id" : "dano:hasConfidence",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : "Specifies the confidence level of the inference that identified the drawing element.",
+    "domain" : "dano:DrawingElement",
+    "label" : "has confidence",
+    "range" : "xsd:decimal"
+  }, {
+    "@id" : "dano:hasGeometry",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Links the drawing element to its geometrical representation.",
+    "domain" : "dano:DrawingElement",
+    "label" : "has geometry"
+  }, {
+    "@id" : "dano:hasIfcRepresentation",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : "Specifies the IFC representation of the drawing element.",
+    "domain" : "dano:DrawingElement",
+    "label" : "has IFC representation"
+  }, {
+    "@id" : "dano:hasMeta",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Links meta information to a drawing element.",
+    "domain" : "dano:DrawingElement",
+    "label" : "has meta",
+    "range" : "dano:DrawingElementMeta"
+  }, {
+    "@id" : "dano:inferredAt",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : "Specifies the date when the drawing element was inferred.",
+    "domain" : "dano:DrawingElementMeta",
+    "label" : "inferred at",
+    "range" : "xsd:date"
+  }, {
+    "@id" : "dano:inferredBy",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : "Indicates the actor, company, or software that inferred the drawing element.",
+    "domain" : "dano:DrawingElementMeta",
+    "label" : "inferred by",
+    "range" : "xsd:string"
+  }, {
+    "@id" : "dano:inferredFrom",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : "Specifies the origin file from which the drawing element was extracted.",
+    "domain" : "dano:DrawingElementMeta",
+    "label" : "inferred from",
+    "range" : "xsd:string"
+  }, {
+    "@id" : "dano:inferredWith",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : "Indicates the algorithm used to infer the drawing element.",
+    "domain" : "dano:DrawingElementMeta",
+    "label" : "inferred with",
+    "range" : "xsd:string"
+  }, {
+    "@id" : "dano:isContainedIn",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Indicates that the subject drawing element is part of another drawing element.",
+    "domain" : "dano:DrawingElement",
+    "label" : "is contained in",
+    "range" : "dano:DrawingElement",
+    "inverseOf" : "dano:contains"
+  }, {
+    "@id" : "dano:isDescribedBy",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Indicates that the display element is described by a description element.",
+    "domain" : "dano:DisplayElement",
+    "label" : "is described by",
+    "range" : "dano:DescriptionElement",
+    "inverseOf" : "dano:describes"
+  }, {
+    "@id" : "dano:isReferredToBy",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Indicates that the subject dimension line marker is referred to by another dimension line marker.",
+    "domain" : "dano:DimensionLineMarker",
+    "label" : "is referred to by",
+    "range" : "dano:DimensionLineMarker",
+    "inverseOf" : "dano:refersTo"
+  }, {
+    "@id" : "dano:isText",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : "Indicates that the description element is a text element containing the specified string.",
+    "domain" : "dano:TextElement",
+    "label" : "is text",
+    "range" : "xsd:string"
+  }, {
+    "@id" : "dano:refersTo",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Indicates that the subject dimension line marker refers to another dimension line marker.",
+    "domain" : "dano:DimensionLineMarker",
+    "label" : "refers to",
+    "range" : "dano:DimensionLineMarker",
+    "inverseOf" : "dano:isReferredToBy"
+  } ],
+  "@context" : {
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
+    },
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "https://schema.org/name"
+    },
+    "identifier" : {
+      "@id" : "https://schema.org/identifier",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/elements/1.1/source"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+      "@type" : "@id"
+    },
+    "historyNote" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#historyNote"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/terms/rights"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "memberOf" : {
+      "@id" : "https://schema.org/memberOf",
+      "@type" : "@id"
+    },
+    "email" : {
+      "@id" : "https://schema.org/email",
+      "@type" : "@id"
+    },
+    "homepage" : {
+      "@id" : "http://xmlns.com/foaf/0.1/homepage",
+      "@type" : "@id"
+    },
+    "dano" : "https://w3id.org/dano#",
+    "geo" : "http://www.opengis.net/ont/geosparql#",
+    "schema" : "https://schema.org/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "skos" : "http://www.w3.org/2004/02/skos/core#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "vann" : "http://purl.org/vocab/vann/",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "dc" : "http://purl.org/dc/terms/"
+  }
+}
