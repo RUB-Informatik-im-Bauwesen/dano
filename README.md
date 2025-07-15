@@ -1,4 +1,4 @@
-Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.13.2
+Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.12.0
 
 # Drawing Analyis Ontology (DAnO)
 
@@ -12,11 +12,11 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.13
     [[0000-0002-8685-436X](https://orcid.org/0000-0002-8685-436X)]
     [phillip.schoenfelder@rub.de](phillip.schoenfelder@rub.de) of [Ruhr-Universität Bochum](https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/phillip_schoenfelder.html.en)
 * **Modified**
-  * 2025-03-11
+  * 2025-07-15
 * **Issued**
   * 2025-03-11
 * **Version Information**
-  * v0.1
+  * v0.2
 * **License &amp; Rights**
   * [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
   * &copy; 2025 by Phillip Schönfelder
@@ -27,11 +27,13 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.13
 ### Description
 This ontology covers concepts of technical drawings from the perspective of computer vision-based drawing analysis to be used in collaborative settings or for post-processing.
 
-The preferred namespace prefix is `dano` for the namespace IRI [https://w3id.org/dano](https://w3id.org/dano). 
+The preferred namespace prefix is `dano` for the namespace IRI [https://w3id.org/dano](https://w3id.org/dano).
 
-* **History Note:** 
-  
+* **History Note:**   
+
   v0.1: initial ontology
   
+  v0.2: added cardinality constraints to the taxonomy, restructured taxonomy, modified image
+ 
 ![Ontology overview](https://rub-informatik-im-bauwesen.github.io/dano/dano.png "Ontology overview")
 **Figure 1:** Ontology overview
