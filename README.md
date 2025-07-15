@@ -35,5 +35,5 @@ The preferred namespace prefix is `dano` for the namespace IRI [https://w3id.org
   
   v0.2: added cardinality constraints to the taxonomy, restructured taxonomy, modified image
  
-![Ontology overview](https://rub-informatik-im-bauwesen.github.io/dano/dano.png "Ontology overview")
+![Ontology overview](https://rub-informatik-im-bauwesen.github.io/dano/dano.png?v=0 "Ontology overview")
 **Figure 1:** Ontology overview
