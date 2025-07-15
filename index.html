@@ -294,7 +294,7 @@ td {
     ],
     "https://schema.org/creator": [
       {
-        "@id": "_:n4ea7499ed37a436584abfab0965b39bdb1"
+        "@id": "_:n40a924d9ee8040499ece8a0156f0a1d5b1"
       }
     ],
     "https://schema.org/dateIssued": [
@@ -306,13 +306,13 @@ td {
     "https://schema.org/dateModified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2025-03-11"
+        "@value": "2025-07-15"
       }
     ],
     "https://schema.org/description": [
       {
         "@language": "en",
-        "@value": "This ontology covers concepts of technical drawings from the perspective of computer vision-based drawing analysis to be used in collaborative settings or for post-processing.\n  schema:image <dano.png> ;\nThe preferred namespace prefix is `dano` for the namespace IRI [https://w3id.org/dano](https://w3id.org/dano). \n"
+        "@value": "This ontology covers concepts of technical drawings from the perspective of computer vision-based drawing analysis to be used in collaborative settings or for post-processing. \nThe preferred namespace prefix is `dano` for the namespace IRI [https://w3id.org/dano](https://w3id.org/dano)."
       }
     ],
     "https://schema.org/license": [
@@ -328,12 +328,12 @@ td {
     ],
     "https://schema.org/publisher": [
       {
-        "@id": "_:n4ea7499ed37a436584abfab0965b39bdb3"
+        "@id": "_:n40a924d9ee8040499ece8a0156f0a1d5b3"
       }
     ]
   },
   {
-    "@id": "_:n4ea7499ed37a436584abfab0965b39bdb1",
+    "@id": "_:n40a924d9ee8040499ece8a0156f0a1d5b1",
     "https://schema.org/email": [
       {
         "@id": "mailto:phillip.schoenfelder@rub.de"
@@ -351,7 +351,7 @@ td {
     ]
   },
   {
-    "@id": "_:n4ea7499ed37a436584abfab0965b39bdb3",
+    "@id": "_:n40a924d9ee8040499ece8a0156f0a1d5b3",
     "https://schema.org/name": [
       {
         "@value": "Chair of Computing in Engineering"
@@ -428,7 +428,7 @@ td {
             <dt>
               <a class="hover_property" href="http://purl.org/dc/terms/modified" title="Date on which the resource was changed. Defined in DCMI Metadata Terms">Date Modified</a>
             </dt>
-            <dd><p>2025-03-11</p></dd>
+            <dd><p>2025-07-15</p></dd>
           </div>
           <div>
             <dt>
@@ -462,7 +462,7 @@ td {
             <dt>
               <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionInfo" title="The annotation property that provides version information for an ontology or another OWL construct. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Info</a>
             </dt>
-            <dd><p>v0.1</p></dd>
+            <dd><p>v0.2</p></dd>
           </div>
           <div>
             <dt>
@@ -482,7 +482,8 @@ td {
             <dt>
               <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#historyNote" title="A note about the past state/use/meaning of a concept. Defined in SKOS Vocabulary">History Note</a>
             </dt>
-            <dd><p>v0.1: initial ontology</p></dd>
+            <dd><p>v0.1: initial ontology</p>
+<p>v0.2: added cardinality constraints to the taxonomy, restructured taxonomy, modified image</p></dd>
           </div>
           <div>
             <dt>
@@ -496,14 +497,37 @@ td {
             <dt>
               <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
             </dt>
-            <dd><p>This ontology covers concepts of technical drawings from the perspective of computer vision-based drawing analysis to be used in collaborative settings or for post-processing.
-  schema:image <dano.png> ;
-The preferred namespace prefix is <code>dano</code> for the namespace IRI <a href="https://w3id.org/dano">https://w3id.org/dano</a>. </p></dd>
+            <dd><p>This ontology covers concepts of technical drawings from the perspective of computer vision-based drawing analysis to be used in collaborative settings or for post-processing. 
+The preferred namespace prefix is <code>dano</code> for the namespace IRI <a href="https://w3id.org/dano">https://w3id.org/dano</a>.</p></dd>
           </div>
         </dl>
       </div>
       <div class="section" id="classes">
         <h2>Classes</h2>
+        <div class="property entity" id="AxisLine">
+          <h3>Axis Line
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/dano#AxisLine</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Line">Line</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="Composite">
           <h3>Composite
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -540,7 +564,13 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
                 <ul>
                   <li>
                     <span>
-                      <a href="#DimensionLineChain">Dimension Line Chain</a>
+                      <a href="#Dimension">Dimension</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#DimensionChain">Dimension Chain</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -640,6 +670,136 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
             </tr>
           </table>
         </div>
+        <div class="property entity" id="Dimension">
+          <h3>Dimension
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/dano#Dimension</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A composite element, comprising exactly 1 DimensionLine, 2 Terminators (at the line's ends), and 1 TextElement (for the dimension value).</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Composite">Composite</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="Convenience property for things that subclass owl:Restriction. Defined in Ontology Documentation Profile">Restriction</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <span>
+                        <span>
+                          <a href="#contains">contains</a>
+                          <sup class="sup-op" title="OWL Object Property">op</sup>
+                        </span>
+                        <span>
+                          <span class="cardinality">exactly</span>
+                          <span>1</span>
+                        </span><br>
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <span>
+                        <span>
+                          <a href="#contains">contains</a>
+                          <sup class="sup-op" title="OWL Object Property">op</sup>
+                        </span>
+                        <span>
+                          <span class="cardinality">exactly</span>
+                          <span>2</span>
+                        </span><br>
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <span>
+                        <span>
+                          <a href="#contains">contains</a>
+                          <sup class="sup-op" title="OWL Object Property">op</sup>
+                        </span>
+                        <span>
+                          <span class="cardinality">exactly</span>
+                          <span>1</span>
+                        </span><br>
+                      </span>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="DimensionChain">
+          <h3>Dimension Chain
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/dano#DimensionChain</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A sequence of dimensions connected together to represent cumulative measurements.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Composite">Composite</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="Convenience property for things that subclass owl:Restriction. Defined in Ontology Documentation Profile">Restriction</a>
+              </th>
+              <td>
+                <span>
+                  <span>
+                    <span>
+                      <a href="#contains">contains</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                    <span>
+                      <span class="cardinality">min</span>
+                      <span>2</span>
+                    </span><br>
+                  </span>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="DimensionLine">
           <h3>Dimension Line
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -655,7 +815,7 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>A line indicating dimensions in a drawing, typically used to represent measurements.</p></td>
+              <td><p>The line type for indicating dimensions in a drawing, typically used to represent measurements.</p></td>
             </tr>
             <tr>
               <th>
@@ -677,114 +837,6 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
                   <a href="#endsWith">ends with</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="DimensionLineChain">
-          <h3>Dimension Line Chain
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/dano#DimensionLineChain</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-              </th>
-              <td><p>A sequence of dimension lines connected together to represent cumulative measurements.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Composite">Composite</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="DimensionLineMarker">
-          <h3>Dimension Line Marker
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/dano#DimensionLineMarker</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-              </th>
-              <td><p>A marker used to indicate endpoints or reference points on a dimension line.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Symbol">Symbol</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#isReferredToBy">is referred to by</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#refersTo">refers to</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#endsWith">ends with</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#isReferredToBy">is referred to by</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#refersTo">refers to</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
               </td>
             </tr>
           </table>
@@ -843,10 +895,20 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
               </th>
               <td>
-                <span>
-                  <a href="#describes">describes</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#describes">describes</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#isDepictedBy">isDepictedBy</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -1042,6 +1104,30 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
             </tr>
           </table>
         </div>
+        <div class="property entity" id="Equipmentsymbol">
+          <h3>Equipment symbol
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/dano#EquipmentSymbol</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Symbol">Symbol</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="Line">
           <h3>Line
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -1075,8 +1161,48 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
               </th>
               <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#AxisLine">Axis Line</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#DimensionLine">Dimension Line</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="SectionSymbol">
+          <h3>Section Symbol
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/dano#SectionSymbol</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A symbol defining the section plane that opens up a view section. Must have a partner symbol and is referred to by a TextElement which is its reference letter.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
                 <span>
-                  <a href="#DimensionLine">Dimension Line</a>
+                  <a href="#Symbol">Symbol</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1116,10 +1242,104 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
               </th>
               <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#Equipmentsymbol">Equipment symbol</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#SectionSymbol">Section Symbol</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#Terminator">Terminator</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Terminator">
+          <h3>Terminator
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/dano#Terminator</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A marker used to indicate endpoints or reference points on a dimension line.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
                 <span>
-                  <a href="#DimensionLineMarker">Dimension Line Marker</a>
+                  <a href="#Symbol">Symbol</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#isReferredToBy">is referred to by</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#refersTo">refers to</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#endsWith">ends with</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#isReferredToBy">is referred to by</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#refersTo">refers to</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -1190,6 +1410,25 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
                 <span>
                   <a href="#Composite">Composite</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="Convenience property for things that subclass owl:Restriction. Defined in Ontology Documentation Profile">Restriction</a>
+              </th>
+              <td>
+                <span>
+                  <span>
+                    <span>
+                      <a href="#contains">contains</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                    <span>
+                      <span class="cardinality">min</span>
+                      <span>2</span>
+                    </span><br>
+                  </span>
                 </span>
               </td>
             </tr>
@@ -1459,7 +1698,7 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
               </th>
               <td>
                 <span>
-                  <a href="#DimensionLineMarker">Dimension Line Marker</a>
+                  <a href="#Terminator">Terminator</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1578,6 +1817,36 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
             </tr>
           </table>
         </div>
+        <div class="property entity" id="isDepictedBy">
+          <h3>isDepictedBy
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/dano#isDepictedBy</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Indicates that the real-world subject is depicted by the object display element, which is typically a geometric representation.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#DisplayElement">Display Element</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="isDescribedBy">
           <h3>is described by
             <sup class="sup-op" title="OWL Object Property">op</sup>
@@ -1642,7 +1911,7 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
               </th>
               <td>
                 <span>
-                  <a href="#DimensionLineMarker">Dimension Line Marker</a>
+                  <a href="#Terminator">Terminator</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1653,7 +1922,7 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
               </th>
               <td>
                 <span>
-                  <a href="#DimensionLineMarker">Dimension Line Marker</a>
+                  <a href="#Terminator">Terminator</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1683,7 +1952,7 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
               </th>
               <td>
                 <span>
-                  <a href="#DimensionLineMarker">Dimension Line Marker</a>
+                  <a href="#Terminator">Terminator</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1694,7 +1963,7 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
               </th>
               <td>
                 <span>
-                  <a href="#DimensionLineMarker">Dimension Line Marker</a>
+                  <a href="#Terminator">Terminator</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2098,19 +2367,22 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
           </h4>
           <ul class="second">
             <li>
+              <a href="#AxisLine">Axis Line</a>
+            </li>
+            <li>
               <a href="#Composite">Composite</a>
             </li>
             <li>
               <a href="#DescriptionElement">Description Element</a>
             </li>
             <li>
+              <a href="#Dimension">Dimension</a>
+            </li>
+            <li>
+              <a href="#DimensionChain">Dimension Chain</a>
+            </li>
+            <li>
               <a href="#DimensionLine">Dimension Line</a>
-            </li>
-            <li>
-              <a href="#DimensionLineChain">Dimension Line Chain</a>
-            </li>
-            <li>
-              <a href="#DimensionLineMarker">Dimension Line Marker</a>
             </li>
             <li>
               <a href="#DisplayElement">Display Element</a>
@@ -2122,10 +2394,19 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
               <a href="#DrawingElementMeta">Drawing Element Meta</a>
             </li>
             <li>
+              <a href="#Equipmentsymbol">Equipment symbol</a>
+            </li>
+            <li>
               <a href="#Line">Line</a>
             </li>
             <li>
+              <a href="#SectionSymbol">Section Symbol</a>
+            </li>
+            <li>
               <a href="#Symbol">Symbol</a>
+            </li>
+            <li>
+              <a href="#Terminator">Terminator</a>
             </li>
             <li>
               <a href="#TextElement">Text Element</a>
@@ -2166,6 +2447,9 @@ The preferred namespace prefix is <code>dano</code> for the namespace IRI <a hre
             </li>
             <li>
               <a href="#isContainedIn">is contained in</a>
+            </li>
+            <li>
+              <a href="#isDepictedBy">isDepictedBy</a>
             </li>
             <li>
               <a href="#isDescribedBy">is described by</a>

@@ -1,20 +1,50 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
+    "@type" : "owl:Restriction",
+    "onClass" : "dano:DimensionLine",
+    "onProperty" : "dano:contains",
+    "qualifiedCardinality" : "1"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "owl:Restriction",
+    "minQualifiedCardinality" : "2",
+    "onClass" : "dano:Dimension",
+    "onProperty" : "dano:contains"
+  }, {
+    "@id" : "_:b2",
     "identifier" : "https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/phillip_schoenfelder.html.en",
     "name" : "Ruhr-Universität Bochum"
   }, {
-    "@id" : "_:b1",
-    "@type" : "schema:Person",
-    "email" : "mailto:phillip.schoenfelder@rub.de",
-    "identifier" : "https://orcid.org/0000-0002-8685-436X",
-    "memberOf" : "_:b0",
-    "name" : "Phillip Schönfelder"
+    "@id" : "_:b3",
+    "@type" : "owl:Restriction",
+    "onClass" : "dano:Terminator",
+    "onProperty" : "dano:contains",
+    "qualifiedCardinality" : "2"
   }, {
-    "@id" : "_:b2",
+    "@id" : "_:b4",
+    "@type" : "owl:Restriction",
+    "onClass" : "dano:TextElement",
+    "onProperty" : "dano:contains",
+    "qualifiedCardinality" : "1"
+  }, {
+    "@id" : "_:b5",
     "@type" : "foaf:Organization",
     "homepage" : "http://www.inf.bi.rub.de",
     "foaf:name" : "Chair of Computing in Engineering"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "schema:Person",
+    "email" : "mailto:phillip.schoenfelder@rub.de",
+    "identifier" : "https://orcid.org/0000-0002-8685-436X",
+    "memberOf" : "_:b2",
+    "name" : "Phillip Schönfelder"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "owl:Restriction",
+    "minQualifiedCardinality" : "2",
+    "onClass" : "dano:TextElement",
+    "onProperty" : "dano:contains"
   }, {
     "@id" : "http://purl.org/dc/elements/1.1/coverage",
     "comment" : {
@@ -186,15 +216,15 @@
   }, {
     "@id" : "https://w3id.org/dano",
     "@type" : "owl:Ontology",
-    "creator" : "_:b1",
+    "creator" : "_:b6",
     "description" : {
       "@language" : "en",
-      "@value" : "This ontology covers concepts of technical drawings from the perspective of computer vision-based drawing analysis to be used in collaborative settings or for post-processing.\n  schema:image <dano.png> ;\nThe preferred namespace prefix is `dano` for the namespace IRI [https://w3id.org/dano](https://w3id.org/dano). \n"
+      "@value" : "This ontology covers concepts of technical drawings from the perspective of computer vision-based drawing analysis to be used in collaborative settings or for post-processing. \nThe preferred namespace prefix is `dano` for the namespace IRI [https://w3id.org/dano](https://w3id.org/dano)."
     },
     "issued" : "2025-03-11",
     "license" : "https://creativecommons.org/licenses/by/4.0/",
-    "modified" : "2025-03-11",
-    "publisher" : "_:b2",
+    "modified" : "2025-07-15",
+    "publisher" : "_:b5",
     "rights" : "Copyright 2025 by Phillip Schönfelder",
     "dc:source" : {
       "@id" : "https://github.com/RUB-Informatik-im-Bauwesen/dano"
@@ -206,8 +236,13 @@
     "preferredNamespacePrefix" : "dano",
     "preferredNamespaceUri" : "https://w3id.org/dano",
     "versionIRI" : "https://w3id.org/dano",
-    "versionInfo" : "v0.1",
-    "historyNote" : "\n  \n  v0.1: initial ontology\n  \n  "
+    "versionInfo" : "v0.2",
+    "historyNote" : "  \n  v0.1: initial ontology\n  \n  v0.2: added cardinality constraints to the taxonomy, restructured taxonomy, modified image\n "
+  }, {
+    "@id" : "dano:AxisLine",
+    "@type" : "owl:Class",
+    "label" : "Axis Line",
+    "subClassOf" : "dano:Line"
   }, {
     "@id" : "dano:Composite",
     "@type" : "owl:Class",
@@ -221,23 +256,27 @@
     "label" : "Description Element",
     "subClassOf" : "dano:DrawingElement"
   }, {
+    "@id" : "dano:Dimension",
+    "@type" : "owl:Class",
+    "comment" : "A composite element, comprising exactly 1 DimensionLine, 2 Terminators (at the line's ends), and 1 TextElement (for the dimension value).",
+    "label" : "Dimension",
+    "subClassOf" : [ "_:b3", "_:b0", "_:b4", "dano:Composite" ]
+  }, {
+    "@id" : "dano:DimensionChain",
+    "@type" : "owl:Class",
+    "comment" : "A sequence of dimensions connected together to represent cumulative measurements.",
+    "label" : "Dimension Chain",
+    "subClassOf" : [ "_:b1", "dano:Composite" ]
+  }, {
     "@id" : "dano:DimensionLine",
     "@type" : "owl:Class",
-    "comment" : "A line indicating dimensions in a drawing, typically used to represent measurements.",
+    "comment" : "The line type for indicating dimensions in a drawing, typically used to represent measurements.",
     "label" : "Dimension Line",
     "subClassOf" : "dano:Line"
   }, {
-    "@id" : "dano:DimensionLineChain",
-    "@type" : "owl:Class",
-    "comment" : "A sequence of dimension lines connected together to represent cumulative measurements.",
-    "label" : "Dimension Line Chain",
-    "subClassOf" : "dano:Composite"
-  }, {
-    "@id" : "dano:DimensionLineMarker",
-    "@type" : "owl:Class",
-    "comment" : "A marker used to indicate endpoints or reference points on a dimension line.",
-    "label" : "Dimension Line Marker",
-    "subClassOf" : "dano:Symbol"
+    "@id" : "dano:Dimension_1",
+    "@type" : "dano:Dimension",
+    "label" : "Dimension"
   }, {
     "@id" : "dano:DisplayElement",
     "@type" : "owl:Class",
@@ -257,17 +296,34 @@
     "label" : "Drawing Element Meta",
     "subClassOf" : "owl:Thing"
   }, {
+    "@id" : "dano:EquipmentSymbol",
+    "@type" : "owl:Class",
+    "label" : "Equipment symbol",
+    "subClassOf" : "dano:Symbol"
+  }, {
     "@id" : "dano:Line",
     "@type" : "owl:Class",
     "comment" : "A linear description element in a drawing.",
     "label" : "Line",
     "subClassOf" : "dano:DescriptionElement"
   }, {
+    "@id" : "dano:SectionSymbol",
+    "@type" : "owl:Class",
+    "comment" : "A symbol defining the section plane that opens up a view section. Must have a partner symbol and is referred to by a TextElement which is its reference letter.",
+    "label" : "Section Symbol",
+    "subClassOf" : "dano:Symbol"
+  }, {
     "@id" : "dano:Symbol",
     "@type" : "owl:Class",
     "comment" : "A symbolic description element representing various annotations or markers.",
     "label" : "Symbol",
     "subClassOf" : "dano:DescriptionElement"
+  }, {
+    "@id" : "dano:Terminator",
+    "@type" : "owl:Class",
+    "comment" : "A marker used to indicate endpoints or reference points on a dimension line.",
+    "label" : "Terminator",
+    "subClassOf" : "dano:Symbol"
   }, {
     "@id" : "dano:TextElement",
     "@type" : "owl:Class",
@@ -279,7 +335,7 @@
     "@type" : "owl:Class",
     "comment" : "A composite element containing multiple text elements, typically for multiline text.",
     "label" : "Text Field",
-    "subClassOf" : "dano:Composite"
+    "subClassOf" : [ "_:b7", "dano:Composite" ]
   }, {
     "@id" : "dano:contains",
     "@type" : [ "owl:TransitiveProperty", "owl:ObjectProperty" ],
@@ -308,7 +364,7 @@
     "comment" : "Indicates that a dimension line ends with a dimension line marker.",
     "domain" : "dano:DimensionLine",
     "label" : "ends with",
-    "range" : "dano:DimensionLineMarker",
+    "range" : "dano:Terminator",
     "subPropertyOf" : "dano:contains"
   }, {
     "@id" : "dano:hasConfidence",
@@ -373,6 +429,13 @@
     "range" : "dano:DrawingElement",
     "inverseOf" : "dano:contains"
   }, {
+    "@id" : "dano:isDepictedBy",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Indicates that the real-world subject is depicted by the object display element, which is typically a geometric representation.",
+    "label" : "isDepictedBy",
+    "range" : "dano:DisplayElement",
+    "inverseOf" : "dano:depicts"
+  }, {
     "@id" : "dano:isDescribedBy",
     "@type" : "owl:ObjectProperty",
     "comment" : "Indicates that the display element is described by a description element.",
@@ -384,9 +447,9 @@
     "@id" : "dano:isReferredToBy",
     "@type" : "owl:ObjectProperty",
     "comment" : "Indicates that the subject dimension line marker is referred to by another dimension line marker.",
-    "domain" : "dano:DimensionLineMarker",
+    "domain" : "dano:Terminator",
     "label" : "is referred to by",
-    "range" : "dano:DimensionLineMarker",
+    "range" : "dano:Terminator",
     "inverseOf" : "dano:refersTo"
   }, {
     "@id" : "dano:isText",
@@ -399,18 +462,34 @@
     "@id" : "dano:refersTo",
     "@type" : "owl:ObjectProperty",
     "comment" : "Indicates that the subject dimension line marker refers to another dimension line marker.",
-    "domain" : "dano:DimensionLineMarker",
+    "domain" : "dano:Terminator",
     "label" : "refers to",
-    "range" : "dano:DimensionLineMarker",
+    "range" : "dano:Terminator",
     "inverseOf" : "dano:isReferredToBy"
   } ],
   "@context" : {
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "onProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
+      "@type" : "@id"
+    },
+    "onClass" : {
+      "@id" : "http://www.w3.org/2002/07/owl#onClass",
+      "@type" : "@id"
+    },
+    "qualifiedCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#qualifiedCardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
     "range" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
       "@type" : "@id"
-    },
-    "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "domain" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
@@ -423,21 +502,21 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
       "@type" : "@id"
     },
-    "subClassOf" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
-      "@type" : "@id"
-    },
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
       "@type" : "@id"
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
       "@type" : "@id"
     },
-    "inverseOf" : {
-      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
-      "@type" : "@id"
+    "minQualifiedCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#minQualifiedCardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
     },
     "name" : {
       "@id" : "https://schema.org/name"
@@ -459,18 +538,19 @@
     "source" : {
       "@id" : "http://purl.org/dc/elements/1.1/source"
     },
-    "preferredNamespaceUri" : {
-      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+    "homepage" : {
+      "@id" : "http://xmlns.com/foaf/0.1/homepage",
       "@type" : "@id"
     },
     "historyNote" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#historyNote"
     },
-    "description" : {
-      "@id" : "http://purl.org/dc/terms/description"
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
       "@type" : "@id"
     },
     "publisher" : {
@@ -480,6 +560,13 @@
     "license" : {
       "@id" : "http://purl.org/dc/terms/license",
       "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
     },
     "rights" : {
       "@id" : "http://purl.org/dc/terms/rights"
@@ -491,20 +578,12 @@
     "preferredNamespacePrefix" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
     },
-    "modified" : {
-      "@id" : "http://purl.org/dc/terms/modified",
-      "@type" : "http://www.w3.org/2001/XMLSchema#date"
-    },
     "memberOf" : {
       "@id" : "https://schema.org/memberOf",
       "@type" : "@id"
     },
     "email" : {
       "@id" : "https://schema.org/email",
-      "@type" : "@id"
-    },
-    "homepage" : {
-      "@id" : "http://xmlns.com/foaf/0.1/homepage",
       "@type" : "@id"
     },
     "dano" : "https://w3id.org/dano#",
